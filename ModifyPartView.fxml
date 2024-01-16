@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Importing JavaFX libraries -->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="myapp.inventorysystem.ModifyPartController">
+    <!-- Main Title -->
+    <Label layoutX="48.0" layoutY="20.0" style="-fx-font-weight: bold;" text="Inventory Management System">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+    <!-- Modify Part Title -->
+    <Label layoutX="87.0" layoutY="60.0" style="-fx-font-weight: bold;" text="Modify Part">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+    <!-- Labels and Text Fields -->
+    <Label layoutX="105.0" layoutY="110.0" text="ID"/>
+    <Label layoutX="105.0" layoutY="145.0" text="Name"/>
+    <Label layoutX="105.0" layoutY="180.0" text="Inventory"/>
+    <Label layoutX="105.0" layoutY="215.0" text="Price"/>
+    <Label layoutX="105.0" layoutY="250.0" text="Min"/>
+    <Label layoutX="105.0" layoutY="285.0" text="Max"/>
+    <Label fx:id="partIdNameLabel" layoutX="105.0" layoutY="315.0" text="Machine ID"/>
+
+
+    <!-- Text Fields -->
+    <TextField fx:id="partIdText" editable="false" layoutX="190.0" layoutY="105.0"/>
+    <TextField fx:id="partNameText" layoutX="190.0" layoutY="140.0"/>
+    <TextField fx:id="partInventoryText" layoutX="190.0" layoutY="175.0"/>
+    <TextField fx:id="partPriceText" layoutX="190.0" layoutY="210.0"/>
+    <TextField fx:id="partMinText" layoutX="190.0" layoutY="245.0"/>
+    <TextField fx:id="partMaxText" layoutX="190.0" layoutY="280.0"/>
+    <TextField fx:id="partIdNameText" layoutX="190.0" layoutY="315.0"/>
+
+
+    <!-- Radio Buttons for Part Type -->
+    <RadioButton fx:id="inHouseRadioButton" layoutX="190.0" layoutY="350.0" mnemonicParsing="false"
+                 onAction="#inHouseRadioButtonAction" text="In-House"/>
+    <RadioButton fx:id="outsourcedRadioButton" layoutX="290.0" layoutY="350.0" mnemonicParsing="false"
+                 onAction="#outsourcedRadioButtonAction" text="Outsourced"/>
+
+    <!-- Save Button -->
+    <Button layoutX="500.0" layoutY="385.0" mnemonicParsing="false" onAction="#saveButtonAction" text="Save"/>
+
+    <!-- Cancel Button -->
+    <Button layoutX="500.0" layoutY="425.0" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel"/>
+</AnchorPane>
